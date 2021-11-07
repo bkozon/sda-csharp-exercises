@@ -9,9 +9,9 @@ namespace sda_csharp_exercises
             int[] numbers = { 2, 4, 1, 8, 9, 5 };
             BubbleSort(numbers);
         }
-        public static void BubbleSort(int[] numbers)
+        public static void BubbleSort(int[] numbers) //https://www.geeksforgeeks.org/bubble-sort/
         {
-            for (int i = 0; i < numbers.Length-1; i++)
+            for (int i = 0; i < numbers.Length-1; i++) //w drugiej pętli numbers.Length-i-1
             {
                 int temp = 0;
                 int temp2 = 0;
