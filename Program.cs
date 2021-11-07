@@ -16,14 +16,20 @@ namespace sda_csharp_exercises
 
         public static void Power(int power, int number)
         {
-
-            for (int i = 0; i < power-1; i++)
+            if (number < 0)
             {
-                number = number * number;
-                
-
+                Console.WriteLine("Liczba powinna być większa niż 0.");
             }
-            Console.WriteLine(number);
+            else
+            {
+                for (int i = 0; i < power - 1; i++)
+                {
+                    number = number * number;
+
+
+                }
+                Console.WriteLine(number);
+            }
         }
     }
 }
