@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sda_csharp_exercises
 {
-    class Manager : Employee
+    sealed class Manager : Employee
     {
         public Manager(string firstName, string lastName, int yearOfBirth, decimal salary):
             base (firstName,lastName,yearOfBirth,salary)
