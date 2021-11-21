@@ -12,5 +12,17 @@ namespace sda_csharp_exercises
         public PlayerStats Stats { get; set; } = new PlayerStats();
         public List<Item> Items { get; set; } = new List<Item>();
 
+        public int XP
+        {
+            get
+            {
+                return Stats.XP;
+            }
+            set
+            {
+                Stats.XP = value;
+            }
+        }
+
     }
 }
