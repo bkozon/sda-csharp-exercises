@@ -23,16 +23,6 @@ namespace sda_csharp_exercises
             B = new MyPoint(bx, by);
         }
 
-        public double Length(MyPoint A, MyPoint B)
-        {
-            double dx = A.x - B.x;
-            double dy = A.y - B.y;
-
-            double length = Math.Sqrt(dx * dx + dy * dy);
-
-            return length;
-        }
-
         public double Length()
         {
             double dx = A.x - B.x;
