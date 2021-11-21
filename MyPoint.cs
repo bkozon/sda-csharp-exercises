@@ -8,15 +8,18 @@ namespace sda_csharp_exercises
 {
     class MyPoint
     {
-        public int x;
-        public int y;
+        public double X { get; set; }
+        public double Y { get; set; }
 
-        public MyPoint(int x, int y)
+        public MyPoint(double x, double y)
         {
-            this.x = x;
-            this.y = y;
+            X = x;
+            Y = y;
         }
-               
 
+        public virtual double GetDistanceFromPoint(MyPoint point)
+        {
+            return Math.Sqrt(Math.Pow(Y - X, 2) + Math.Pow(point.Y - point.X, 2));
+        }
     }
 }

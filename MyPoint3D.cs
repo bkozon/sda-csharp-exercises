@@ -8,14 +8,18 @@ namespace sda_csharp_exercises
 {
     class MyPoint3D : MyPoint
     {
-        public int z;
+        public double Z { get; set; }
 
-        public MyPoint3D(int x, int y, int z):
-            base(x, y)
+        public MyPoint3D(double x, double y, double z) : base(x, y)
         {
-            this.z = z;
+            Z = z;
         }
 
-       
+        public override double GetDistanceFromPoint(MyPoint point)
+        {
+            MyPoint3D newPoint = (MyPoint3D)point;
+
+            return Math.Sqrt(Math.Pow(newPoint.X - X, 2) + Math.Pow(newPoint.Y - Y, 2) + Math.Pow(newPoint.Z - Z, 2));
+        }
     }
 }
