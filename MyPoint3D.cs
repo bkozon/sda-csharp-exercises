@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace sda_csharp_exercises
 {
-    class MyPoint
+    class MyPoint3D : MyPoint
     {
-        public int x;
-        public int y;
+        public int z;
 
-        public MyPoint(int x, int y)
+        public MyPoint3D(int x, int y, int z):
+            base(x, y)
         {
-            this.x = x;
-            this.y = y;
+            this.z = z;
         }
-               
 
+       
     }
 }
