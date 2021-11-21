@@ -19,13 +19,11 @@ namespace sda_csharp_exercises
 
         public LineSegment(int ax, int bx, int ay, int by)
         {
-            A.x = ax;
-            B.x = bx;
-            A.y = ay;
-            B.y = by;
+            A = new MyPoint(ax, ay);
+            B = new MyPoint(bx, by);
         }
 
-        public static double Length(MyPoint A, MyPoint B)
+        public double Length(MyPoint A, MyPoint B)
         {
             double dx = A.x - B.x;
             double dy = A.y - B.y;
@@ -35,12 +33,12 @@ namespace sda_csharp_exercises
             return length;
         }
 
-        public double Length(int ax, int bx, int ay, int by)
+        public double Length()
         {
-            double dx = ax - bx;
-            double dy = ay - by;
+            double dx = A.x - B.x;
+            double dy = A.y - B.y;
 
-            double length = Math.Sqrt(dx * dx + dy * dy);
+            double length = Math.Sqrt(Math.Pow(dx,2) + Math.Pow(dy,2));
 
             return length;
         }
